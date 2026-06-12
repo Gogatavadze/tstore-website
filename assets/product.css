@@ -169,3 +169,7 @@ img { max-width: 100%; display: block; }
   .sticky-cta { display:flex; }
   .buy-actions .btn-order { display:none; } /* sticky CTA replaces it on mobile */
 }
+
+/* Honest expectations block */
+.lead-block { max-width: 800px; }
+.lead-block p { color: #3a3a3a; font-size: 15px; margin-bottom: 16px; }

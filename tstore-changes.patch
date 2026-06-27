@@ -1,5 +1,5 @@
 diff --git a/index.html b/index.html
-index 1501cae..368effb 100644
+index 1501cae..0d664ea 100644
 --- a/index.html
 +++ b/index.html
 @@ -258,8 +258,10 @@ button { font-family: inherit; cursor: pointer; }
@@ -98,6 +98,15 @@ index 1501cae..368effb 100644
        <div class="product-desc">24ჯ · 9 დონე · Ice Cooling · 2 თავაკი</div>
        <div class="product-price">
          <span class="price-current">300 ₾</span>
+@@ -924,7 +962,7 @@ button { font-family: inherit; cursor: pointer; }
+       </div>
+       <div class="product-category">სენსორული</div>
+       <div class="product-name">BHRL-04</div>
+-      <div class="product-desc">15ჯ · 9 დონე · Ice Cooling · სენსორული ეკრანი</div>
++      <div class="product-desc">24ჯ · 9 დონე · Ice Cooling · სენსორული ეკრანი</div>
+       <div class="product-price">
+         <span class="price-current">150 ₾</span>
+         <span class="price-old">290 ₾</span>
 @@ -932,21 +970,6 @@ button { font-family: inherit; cursor: pointer; }
        <span class="btn-cart">დეტალურად <i class="ti ti-arrow-right" aria-hidden="true"></i></span>
      </a>
@@ -125,7 +134,7 @@ index 1501cae..368effb 100644
        <div class="product-category">საბაზისო</div>
        <div class="product-name">TMY-002</div>
 -      <div class="product-desc">300 000 იმპულსი · 5 დონე</div>
-+      <div class="product-desc">1 000 000 იმპულსი · 5 დონე</div>
++      <div class="product-desc">12ჯ · 5 დონე · 1 000 000 იმპულსი</div>
        <div class="product-price">
          <span class="price-current">120 ₾</span>
        </div>
@@ -161,7 +170,7 @@ index 1501cae..368effb 100644
            <td class="cmp-price"><s>335₾</s> <b>220₾</b></td>
            <td><a class="cmp-btn" href="products/bhrl-10.html">ნახვა</a></td>
          </tr>
-@@ -1010,7 +1033,7 @@ button { font-family: inherit; cursor: pointer; }
+@@ -1010,34 +1033,25 @@ button { font-family: inherit; cursor: pointer; }
            <td>24 ჯ</td>
            <td>9</td>
            <td><i class="ti ti-check yes"></i></td>
@@ -170,8 +179,10 @@ index 1501cae..368effb 100644
            <td class="cmp-price"><s>350₾</s> <b>200₾</b></td>
            <td><a class="cmp-btn" href="products/bhrl-11.html">ნახვა</a></td>
          </tr>
-@@ -1019,25 +1042,16 @@ button { font-family: inherit; cursor: pointer; }
-           <td>15 ჯ</td>
+         <tr>
+           <td><a href="products/bhrl-04.html">BHRL-04</a></td>
+-          <td>15 ჯ</td>
++          <td>24 ჯ</td>
            <td>9</td>
            <td><i class="ti ti-check yes"></i></td>
 -          <td>999 999</td>
@@ -190,7 +201,8 @@ index 1501cae..368effb 100644
 -        </tr>
          <tr>
            <td><a href="products/tmy-002.html">TMY-002</a></td>
-           <td>—</td>
+-          <td>—</td>
++          <td>12 ჯ</td>
            <td>5</td>
            <td><i class="ti ti-x no"></i></td>
 -          <td>300 000</td>
@@ -222,7 +234,7 @@ index 1501cae..368effb 100644
 +
 +    <details class="faq-item">
 +      <summary>როგორ მუშაობს IPL ეპილატორი? <i class="ti ti-chevron-down" aria-hidden="true"></i></summary>
-+      <p>IPL (Intense Pulsed Light) სინათლის იმპულსს გზავნის კანში. ეს სინათლე შთაინთქმება თმის მელანინში, გარდაიქმნება სითბოდ და აზიანებს თმის ფოლიკულას — შედეგად თმის ზრდა თანდათან ნელდება და მცირდება.</p>
++      <p>IPL (Intense Pulsed Light) სინათლის იმპულსს გამოსცემს. ეს სინათლე შთაინთქმება თმის მელანინში, რომელიც გარდაიქმნება სითბოდ და აზიანებს თმის ფოლიკულას. რის შედეგადაც თმა ფერმკრთალდება, თხელდება და ზრდის ინტენსივობა მცირდება.</p>
 +    </details>
 +
 +    <details class="faq-item">
@@ -237,12 +249,12 @@ index 1501cae..368effb 100644
 +
 +    <details class="faq-item">
 +      <summary>რა პერიოდულობით უნდა გამოვიყენო? <i class="ti ti-chevron-down" aria-hidden="true"></i></summary>
-+      <p>პირველი 4-6 კვირის განმავლობაში რეკომენდებულია გამოყენება კვირაში ერთხელ. ხილული შედეგის მიღების შემდეგ შეგიძლია გადახვიდე შემანარჩუნებელ რეჟიმზე — თვეში 1-2 პროცედურა.</p>
++      <p>პირველი 1-4 კვირის განმავლობაში 3-ჯერ კვირაში. 5-8 კვირის განმავლობაში 2-ჯერ კვირაში. მე-8 კვირის შემდეგ 1-ჯერ კვირაში. ხილული შედეგის მიღების შემდეგ შეგიძლია გადახვიდე შემანარჩუნებელ რეჟიმზე — თვეში 1-2 პროცედურა. ყველაზე სწორი მიდგომაა — თმის ზრდის ინტენსივობაზე დაკვირვება და ისე აპარატის გამოყენების სიხშირის განსაზღვრა.</p>
 +    </details>
 +
 +    <details class="faq-item">
 +      <summary>ყველა კანისა და თმის ტიპს უხდება? <i class="ti ti-chevron-down" aria-hidden="true"></i></summary>
-+      <p>IPL საუკეთესოდ მუშაობს ღია კანსა და მუქ თმაზე. ძალიან ღია (ჭაღარა, ქერა) ან წითელ თმაზე, ასევე ძალიან მუქ კანზე ეფექტი შეიძლება შეზღუდული იყოს. თუ ეჭვი გაქვს, მოგვწერე Messenger-ში — დაგეხმარებით სწორი მოდელის შერჩევაში.</p>
++      <p>IPL საუკეთესოდ მუშაობს ღია კანსა და მუქ თმაზე. ძალიან ღია (ჭაღარა), ასევე ძალიან მუქ კანზე ეფექტი შეიძლება შეზღუდული იყოს. თუ ეჭვი გაქვს, მოგვწერე Messenger-ში — დაგეხმარებით სწორი მოდელის შერჩევაში.</p>
 +    </details>
 +
 +    <details class="faq-item">
@@ -252,7 +264,7 @@ index 1501cae..368effb 100644
 +
 +    <details class="faq-item">
 +      <summary>როგორ ხდება მიწოდება და გადახდა? <i class="ti ti-chevron-down" aria-hidden="true"></i></summary>
-+      <p>მიწოდება უფასოა მთელი საქართველოს მასშტაბით. შეკვეთის გაფორმების შემდეგ დაგიკავშირდებით დეტალების დასაზუსტებლად. გადახდა შესაძლებელია კურიერთან, ადგილზე.</p>
++      <p>მიწოდება უფასოა მთელი საქართველოს მასშტაბით. შეკვეთის გაფორმების შემდეგ კურიერი წინასწარ დაგიკავშირდებათ და ისე მოგაწვდით პროდუქტს. გადახდა შესაძლებელია კურიერთან, ადგილზე.</p>
 +    </details>
 +
 +  </div>
@@ -287,11 +299,15 @@ index 1501cae..368effb 100644
    });
  });
 diff --git a/products/bhrl-04.html b/products/bhrl-04.html
-index 26bf15a..f929da1 100644
+index 26bf15a..9713d95 100644
 --- a/products/bhrl-04.html
 +++ b/products/bhrl-04.html
-@@ -53,7 +53,7 @@
-       <span class="chip"><i class="ti ti-bolt"></i> 15 ჯ</span>
+@@ -50,10 +50,10 @@
+     <p class="p-tagline">სენსორული მართვა და 3-1-ში ფუნქციონალი ხელმისაწვდომ ფასად</p>
+ 
+     <div class="chips">
+-      <span class="chip"><i class="ti ti-bolt"></i> 15 ჯ</span>
++      <span class="chip"><i class="ti ti-bolt"></i> 24 ჯ</span>
        <span class="chip"><i class="ti ti-adjustments"></i> 9 დონე</span>
        <span class="chip chip-cool"><i class="ti ti-snowflake"></i> Ice Cooling</span>
 -      <span class="chip"><i class="ti ti-flash"></i> 999 999 იმპულსი</span>
@@ -299,15 +315,26 @@ index 26bf15a..f929da1 100644
      </div>
  
      <div class="price-block">
-@@ -160,7 +160,7 @@
+@@ -160,8 +160,8 @@
        <h2 class="p-h2">მახასიათებლები</h2>
        <table class="specs">
        <tr><td>მოდელი</td><td>BHRL-04</td></tr>
 -      <tr><td>იმპულსების რაოდენობა</td><td>999 999</td></tr>
+-      <tr><td>მაქს. ენერგია</td><td>15 ჯ</td></tr>
 +      <tr><td>იმპულსების რაოდენობა</td><td>1 000 000</td></tr>
-       <tr><td>მაქს. ენერგია</td><td>15 ჯ</td></tr>
++      <tr><td>მაქს. ენერგია</td><td>24 ჯ</td></tr>
        <tr><td>სიმძლავრე</td><td>48W</td></tr>
        <tr><td>ენერგიის დონეები</td><td>9</td></tr>
+       <tr><td>გაგრილების ფუნქცია</td><td>კი (Ice Cooling)</td></tr>
+@@ -211,7 +211,7 @@
+       </details>
+       <details class="faq-item">
+         <summary>როგორ ხდება მიწოდება და გადახდა? <i class="ti ti-chevron-down"></i></summary>
+-        <p>მიწოდება მთელი საქართველოს მასშტაბით. შეკვეთის გაფორმების შემდეგ დაგიკავშირდებით დეტალების დასაზუსტებლად. გადახდა შესაძლებელია კურიერთან, ადგილზე.</p>
++        <p>მიწოდება უფასოა მთელი საქართველოს მასშტაბით. შეკვეთის გაფორმების შემდეგ კურიერი წინასწარ დაგიკავშირდებათ და ისე მოგაწვდით პროდუქტს. გადახდა შესაძლებელია კურიერთან, ადგილზე.</p>
+       </details>
+       <details class="faq-item">
+         <summary>აქვს თუ არა გარანტია? <i class="ti ti-chevron-down"></i></summary>
 @@ -226,7 +226,7 @@
    <div class="rel-grid">
        <a class="rel-card" href="bhrl-13.html">
@@ -603,7 +630,7 @@ index f259cd2..0000000
 -</body>
 -</html>
 diff --git a/products/bhrl-10.html b/products/bhrl-10.html
-index 1d04552..a26b363 100644
+index 1d04552..f9538ff 100644
 --- a/products/bhrl-10.html
 +++ b/products/bhrl-10.html
 @@ -53,7 +53,7 @@
@@ -624,6 +651,15 @@ index 1d04552..a26b363 100644
        <tr><td>მაქს. ენერგია</td><td>24 ჯ</td></tr>
        <tr><td>სიმძლავრე</td><td>48W</td></tr>
        <tr><td>ენერგიის დონეები</td><td>9</td></tr>
+@@ -213,7 +213,7 @@
+       </details>
+       <details class="faq-item">
+         <summary>როგორ ხდება მიწოდება და გადახდა? <i class="ti ti-chevron-down"></i></summary>
+-        <p>მიწოდება მთელი საქართველოს მასშტაბით. შეკვეთის გაფორმების შემდეგ დაგიკავშირდებით დეტალების დასაზუსტებლად. გადახდა შესაძლებელია კურიერთან, ადგილზე.</p>
++        <p>მიწოდება უფასოა მთელი საქართველოს მასშტაბით. შეკვეთის გაფორმების შემდეგ კურიერი წინასწარ დაგიკავშირდებათ და ისე მოგაწვდით პროდუქტს. გადახდა შესაძლებელია კურიერთან, ადგილზე.</p>
+       </details>
+       <details class="faq-item">
+         <summary>აქვს თუ არა გარანტია? <i class="ti ti-chevron-down"></i></summary>
 @@ -228,7 +228,7 @@
    <div class="rel-grid">
        <a class="rel-card" href="bhrl-13.html">
@@ -634,7 +670,7 @@ index 1d04552..a26b363 100644
          <div class="rel-price"><span class="price-current">300 ₾</span> <span class="price-old">395 ₾</span></div>
        </a>
 diff --git a/products/bhrl-11.html b/products/bhrl-11.html
-index bb14abb..671d281 100644
+index bb14abb..c70303b 100644
 --- a/products/bhrl-11.html
 +++ b/products/bhrl-11.html
 @@ -53,7 +53,7 @@
@@ -655,6 +691,15 @@ index bb14abb..671d281 100644
        <tr><td>მაქს. ენერგია</td><td>24 ჯ</td></tr>
        <tr><td>სიმძლავრე</td><td>48W</td></tr>
        <tr><td>ენერგიის დონეები</td><td>9</td></tr>
+@@ -212,7 +212,7 @@
+       </details>
+       <details class="faq-item">
+         <summary>როგორ ხდება მიწოდება და გადახდა? <i class="ti ti-chevron-down"></i></summary>
+-        <p>მიწოდება მთელი საქართველოს მასშტაბით. შეკვეთის გაფორმების შემდეგ დაგიკავშირდებით დეტალების დასაზუსტებლად. გადახდა შესაძლებელია კურიერთან, ადგილზე.</p>
++        <p>მიწოდება უფასოა მთელი საქართველოს მასშტაბით. შეკვეთის გაფორმების შემდეგ კურიერი წინასწარ დაგიკავშირდებათ და ისე მოგაწვდით პროდუქტს. გადახდა შესაძლებელია კურიერთან, ადგილზე.</p>
+       </details>
+       <details class="faq-item">
+         <summary>აქვს თუ არა გარანტია? <i class="ti ti-chevron-down"></i></summary>
 @@ -227,7 +227,7 @@
    <div class="rel-grid">
        <a class="rel-card" href="bhrl-13.html">
@@ -665,7 +710,7 @@ index bb14abb..671d281 100644
          <div class="rel-price"><span class="price-current">300 ₾</span> <span class="price-old">395 ₾</span></div>
        </a>
 diff --git a/products/bhrl-12.html b/products/bhrl-12.html
-index 93fd439..dfcfffb 100644
+index 93fd439..811836f 100644
 --- a/products/bhrl-12.html
 +++ b/products/bhrl-12.html
 @@ -53,7 +53,7 @@
@@ -686,6 +731,15 @@ index 93fd439..dfcfffb 100644
        <tr><td>მაქს. ენერგია</td><td>24 ჯ</td></tr>
        <tr><td>სიმძლავრე</td><td>48W</td></tr>
        <tr><td>ენერგიის დონეები</td><td>9</td></tr>
+@@ -213,7 +213,7 @@
+       </details>
+       <details class="faq-item">
+         <summary>როგორ ხდება მიწოდება და გადახდა? <i class="ti ti-chevron-down"></i></summary>
+-        <p>მიწოდება მთელი საქართველოს მასშტაბით. შეკვეთის გაფორმების შემდეგ დაგიკავშირდებით დეტალების დასაზუსტებლად. გადახდა შესაძლებელია კურიერთან, ადგილზე.</p>
++        <p>მიწოდება უფასოა მთელი საქართველოს მასშტაბით. შეკვეთის გაფორმების შემდეგ კურიერი წინასწარ დაგიკავშირდებათ და ისე მოგაწვდით პროდუქტს. გადახდა შესაძლებელია კურიერთან, ადგილზე.</p>
+       </details>
+       <details class="faq-item">
+         <summary>აქვს თუ არა გარანტია? <i class="ti ti-chevron-down"></i></summary>
 @@ -228,7 +228,7 @@
    <div class="rel-grid">
        <a class="rel-card" href="bhrl-13.html">
@@ -696,7 +750,7 @@ index 93fd439..dfcfffb 100644
          <div class="rel-price"><span class="price-current">300 ₾</span> <span class="price-old">395 ₾</span></div>
        </a>
 diff --git a/products/bhrl-13.html b/products/bhrl-13.html
-index 3f34a0f..73547be 100644
+index 3f34a0f..de11426 100644
 --- a/products/bhrl-13.html
 +++ b/products/bhrl-13.html
 @@ -3,7 +3,7 @@
@@ -742,6 +796,15 @@ index 3f34a0f..73547be 100644
        <tr><td>მაქს. ენერგია</td><td>24 ჯ</td></tr>
        <tr><td>სიმძლავრე</td><td>48W</td></tr>
        <tr><td>ენერგიის დონეები</td><td>9</td></tr>
+@@ -213,7 +213,7 @@
+       </details>
+       <details class="faq-item">
+         <summary>როგორ ხდება მიწოდება და გადახდა? <i class="ti ti-chevron-down"></i></summary>
+-        <p>მიწოდება მთელი საქართველოს მასშტაბით. შეკვეთის გაფორმების შემდეგ დაგიკავშირდებით დეტალების დასაზუსტებლად. გადახდა შესაძლებელია კურიერთან, ადგილზე.</p>
++        <p>მიწოდება უფასოა მთელი საქართველოს მასშტაბით. შეკვეთის გაფორმების შემდეგ კურიერი წინასწარ დაგიკავშირდებათ და ისე მოგაწვდით პროდუქტს. გადახდა შესაძლებელია კურიერთან, ადგილზე.</p>
+       </details>
+       <details class="faq-item">
+         <summary>აქვს თუ არა გარანტია? <i class="ti ti-chevron-down"></i></summary>
 @@ -263,14 +263,14 @@
  <div class="modal-backdrop" id="orderModal">
    <div class="modal">
@@ -760,11 +823,15 @@ index 3f34a0f..73547be 100644
        <a href="https://m.me/61556465853536" target="_blank" rel="noopener"><i class="ti ti-brand-messenger"></i> Messenger</a>
      </div>
 diff --git a/products/tmy-002.html b/products/tmy-002.html
-index b4a2635..f2d048c 100644
+index b4a2635..27d2175 100644
 --- a/products/tmy-002.html
 +++ b/products/tmy-002.html
-@@ -53,7 +53,7 @@
-       <span class="chip"><i class="ti ti-bolt"></i> —</span>
+@@ -50,10 +50,10 @@
+     <p class="p-tagline">კომპაქტური საბაზისო IPL — პირველი ნაბიჯი გლუვი კანისკენ</p>
+ 
+     <div class="chips">
+-      <span class="chip"><i class="ti ti-bolt"></i> —</span>
++      <span class="chip"><i class="ti ti-bolt"></i> 12 ჯ</span>
        <span class="chip"><i class="ti ti-adjustments"></i> 5 დონე</span>
        
 -      <span class="chip"><i class="ti ti-flash"></i> 300 000 იმპულსი</span>
@@ -781,16 +848,26 @@ index b4a2635..f2d048c 100644
  </section>
  
  <!-- 3-in-1 -->
-@@ -160,7 +160,7 @@
+@@ -160,7 +160,8 @@
        <h2 class="p-h2">მახასიათებლები</h2>
        <table class="specs">
        <tr><td>მოდელი</td><td>TMY-002</td></tr>
 -      <tr><td>იმპულსების რაოდენობა</td><td>300 000</td></tr>
 +      <tr><td>იმპულსების რაოდენობა</td><td>1 000 000</td></tr>
++      <tr><td>მაქს. ენერგია</td><td>12 ჯ</td></tr>
        <tr><td>სიმძლავრე</td><td>36W</td></tr>
        <tr><td>ენერგიის დონეები</td><td>5</td></tr>
        <tr><td>გაგრილების ფუნქცია</td><td>არა</td></tr>
-@@ -222,7 +222,7 @@
+@@ -207,7 +208,7 @@
+       </details>
+       <details class="faq-item">
+         <summary>როგორ ხდება მიწოდება და გადახდა? <i class="ti ti-chevron-down"></i></summary>
+-        <p>მიწოდება მთელი საქართველოს მასშტაბით. შეკვეთის გაფორმების შემდეგ დაგიკავშირდებით დეტალების დასაზუსტებლად. გადახდა შესაძლებელია კურიერთან, ადგილზე.</p>
++        <p>მიწოდება უფასოა მთელი საქართველოს მასშტაბით. შეკვეთის გაფორმების შემდეგ კურიერი წინასწარ დაგიკავშირდებათ და ისე მოგაწვდით პროდუქტს. გადახდა შესაძლებელია კურიერთან, ადგილზე.</p>
+       </details>
+       <details class="faq-item">
+         <summary>აქვს თუ არა გარანტია? <i class="ti ti-chevron-down"></i></summary>
+@@ -222,7 +223,7 @@
    <div class="rel-grid">
        <a class="rel-card" href="bhrl-13.html">
          <div class="rel-img"><img src="../images/products/bhrl-13/1.webp" alt="IPL ფოტოეპილატორი BHRL-13" onerror="this.parentElement.classList.add('noimg')"><div class="img-fallback"><i class="ti ti-photo"></i></div></div>

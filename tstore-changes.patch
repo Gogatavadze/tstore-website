@@ -1,5 +1,5 @@
 diff --git a/index.html b/index.html
-index 1501cae..0d664ea 100644
+index 1501cae..1599fba 100644
 --- a/index.html
 +++ b/index.html
 @@ -258,8 +258,10 @@ button { font-family: inherit; cursor: pointer; }
@@ -238,7 +238,7 @@ index 1501cae..0d664ea 100644
 +    </details>
 +
 +    <details class="faq-item">
-+      <summary>მტკივა თუ არა პროცედურა? <i class="ti ti-chevron-down" aria-hidden="true"></i></summary>
++      <summary>მტკივნეულია თუ არა პროცედურა? <i class="ti ti-chevron-down" aria-hidden="true"></i></summary>
 +      <p>IPL ეპილაცია უმტკივნეულოა. შესაძლოა იგრძნო მსუბუქი სითბო ან ჩხვლეტა, მაგრამ ჩვენი მოდელების უმეტესობას აქვს Ice Cooling გაგრილების ფუნქცია, რომელიც პროცედურას კიდევ უფრო კომფორტულს ხდის.</p>
 +    </details>
 +

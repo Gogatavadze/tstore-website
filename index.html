@@ -258,8 +258,10 @@ button { font-family: inherit; cursor: pointer; }
 
 .trust-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 32px;
+  max-width: 760px;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -739,6 +741,43 @@ button { font-family: inherit; cursor: pointer; }
 .cmp-btn { display: inline-block; padding: 7px 16px; border: 1px solid rgba(0,0,0,0.12); border-radius: 8px; font-size: 13px; font-weight: 500; transition: all .2s; }
 .cmp-btn:hover { background: #d85a30; border-color: #d85a30; color: #fff; }
 
+/* FAQ accordion */
+.faq-wrap { max-width: 760px; margin: 0 auto; }
+.faq-item {
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  margin-bottom: 12px;
+  background: #fff;
+  overflow: hidden;
+}
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 20px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary i {
+  font-size: 20px;
+  color: #d85a30;
+  transition: transform 0.25s;
+  flex-shrink: 0;
+}
+.faq-item[open] summary i { transform: rotate(180deg); }
+.faq-item p {
+  padding: 0 24px 20px;
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #6a6a6a;
+}
+.faq-item[open] summary { color: #d85a30; }
+
 </style>
 </head>
 <body>
@@ -780,7 +819,7 @@ button { font-family: inherit; cursor: pointer; }
     </div>
     <div class="hero-stats">
       <div>
-        <div class="stat-number">7</div>
+        <div class="stat-number">6</div>
         <div class="stat-label">მოდელი ნებისმიერი ბიუჯეტისთვის</div>
       </div>
       <div>
@@ -818,7 +857,7 @@ button { font-family: inherit; cursor: pointer; }
       <div style="color: #1d9e75; font-weight: 600;">✓ CE · ROHS · FCC</div>
     </div>
     <div class="float-badge float-badge-2">
-      <div style="color: #6a6a6a;">1 000 000-მდე</div>
+      <div style="color: #6a6a6a;">1 000 000</div>
       <div style="font-weight: 600;">სინათლის იმპულსი</div>
     </div>
   </div>
@@ -850,19 +889,18 @@ button { font-family: inherit; cursor: pointer; }
   <div class="section-header">
     <div class="section-tag">✦ ჩვენი კოლექცია</div>
     <h2>აირჩიე შენი იდეალური მოდელი</h2>
-    <p class="section-subtitle">შვიდი მოდელი, ერთი მიზანი — სრულყოფილად გლუვი კანი ნებისმიერი ბიუჯეტისთვის</p>
+    <p class="section-subtitle">ექვსი მოდელი, ერთი მიზანი — სრულყოფილად გლუვი კანი ნებისმიერი ბიუჯეტისთვის</p>
   </div>
   
   <div class="products-grid">
     
     <a class="product-card" href="products/bhrl-13.html">
-      <div class="product-badge badge-new">ახალი 2025</div>
       <div class="product-image">
         <img src="images/products/bhrl-13/1.webp" alt="IPL ფოტოეპილატორი BHRL-13" loading="lazy" onerror="this.parentElement.classList.add('noimg')">
         <div class="img-fallback"><i class="ti ti-photo" aria-hidden="true"></i></div>
       </div>
       <div class="product-category">ფლაგმანი</div>
-      <div class="product-name">BHRL-13 · 2025</div>
+      <div class="product-name">BHRL-13</div>
       <div class="product-desc">24ჯ · 9 დონე · Ice Cooling · 2 თავაკი</div>
       <div class="product-price">
         <span class="price-current">300 ₾</span>
@@ -932,21 +970,6 @@ button { font-family: inherit; cursor: pointer; }
       <span class="btn-cart">დეტალურად <i class="ti ti-arrow-right" aria-hidden="true"></i></span>
     </a>
     
-    <a class="product-card" href="products/bhrl-04b.html">
-      <div class="product-image">
-        <img src="images/products/bhrl-04b/1.webp" alt="IPL ფოტოეპილატორი BHRL-04B" loading="lazy" onerror="this.parentElement.classList.add('noimg')">
-        <div class="img-fallback"><i class="ti ti-photo" aria-hidden="true"></i></div>
-      </div>
-      <div class="product-category">ეკონომიური</div>
-      <div class="product-name">BHRL-04B</div>
-      <div class="product-desc">15ჯ · 9 დონე · კლასიკური IPL</div>
-      <div class="product-price">
-        <span class="price-current">140 ₾</span>
-        <span class="price-old">190 ₾</span>
-      </div>
-      <span class="btn-cart">დეტალურად <i class="ti ti-arrow-right" aria-hidden="true"></i></span>
-    </a>
-    
     <a class="product-card" href="products/tmy-002.html">
       <div class="product-image">
         <img src="images/products/tmy-002/1.webp" alt="IPL ეპილატორი TMY-002" loading="lazy" onerror="this.parentElement.classList.add('noimg')">
@@ -954,7 +977,7 @@ button { font-family: inherit; cursor: pointer; }
       </div>
       <div class="product-category">საბაზისო</div>
       <div class="product-name">TMY-002</div>
-      <div class="product-desc">300 000 იმპულსი · 5 დონე</div>
+      <div class="product-desc">1 000 000 იმპულსი · 5 დონე</div>
       <div class="product-price">
         <span class="price-current">120 ₾</span>
       </div>
@@ -979,11 +1002,11 @@ button { font-family: inherit; cursor: pointer; }
       </thead>
       <tbody>
         <tr>
-          <td><a href="products/bhrl-13.html">BHRL-13 · 2025</a></td>
+          <td><a href="products/bhrl-13.html">BHRL-13</a></td>
           <td>24 ჯ</td>
           <td>9</td>
           <td><i class="ti ti-check yes"></i></td>
-          <td>999 999</td>
+          <td>1 000 000</td>
           <td class="cmp-price"><s>395₾</s> <b>300₾</b></td>
           <td><a class="cmp-btn" href="products/bhrl-13.html">ნახვა</a></td>
         </tr>
@@ -992,7 +1015,7 @@ button { font-family: inherit; cursor: pointer; }
           <td>24 ჯ</td>
           <td>9</td>
           <td><i class="ti ti-check yes"></i></td>
-          <td>999 999</td>
+          <td>1 000 000</td>
           <td class="cmp-price"><s>365₾</s> <b>270₾</b></td>
           <td><a class="cmp-btn" href="products/bhrl-12.html">ნახვა</a></td>
         </tr>
@@ -1001,7 +1024,7 @@ button { font-family: inherit; cursor: pointer; }
           <td>24 ჯ</td>
           <td>9</td>
           <td><i class="ti ti-check yes"></i></td>
-          <td>999 999</td>
+          <td>1 000 000</td>
           <td class="cmp-price"><s>335₾</s> <b>220₾</b></td>
           <td><a class="cmp-btn" href="products/bhrl-10.html">ნახვა</a></td>
         </tr>
@@ -1010,7 +1033,7 @@ button { font-family: inherit; cursor: pointer; }
           <td>24 ჯ</td>
           <td>9</td>
           <td><i class="ti ti-check yes"></i></td>
-          <td>999 999</td>
+          <td>1 000 000</td>
           <td class="cmp-price"><s>350₾</s> <b>200₾</b></td>
           <td><a class="cmp-btn" href="products/bhrl-11.html">ნახვა</a></td>
         </tr>
@@ -1019,25 +1042,16 @@ button { font-family: inherit; cursor: pointer; }
           <td>15 ჯ</td>
           <td>9</td>
           <td><i class="ti ti-check yes"></i></td>
-          <td>999 999</td>
+          <td>1 000 000</td>
           <td class="cmp-price"><s>290₾</s> <b>150₾</b></td>
           <td><a class="cmp-btn" href="products/bhrl-04.html">ნახვა</a></td>
-        </tr>
-        <tr>
-          <td><a href="products/bhrl-04b.html">BHRL-04B</a></td>
-          <td>15 ჯ</td>
-          <td>9</td>
-          <td><i class="ti ti-x no"></i></td>
-          <td>999 999</td>
-          <td class="cmp-price"><s>190₾</s> <b>140₾</b></td>
-          <td><a class="cmp-btn" href="products/bhrl-04b.html">ნახვა</a></td>
         </tr>
         <tr>
           <td><a href="products/tmy-002.html">TMY-002</a></td>
           <td>—</td>
           <td>5</td>
           <td><i class="ti ti-x no"></i></td>
-          <td>300 000</td>
+          <td>1 000 000</td>
           <td class="cmp-price"><b>120₾</b></td>
           <td><a class="cmp-btn" href="products/tmy-002.html">ნახვა</a></td>
         </tr>
@@ -1058,7 +1072,7 @@ button { font-family: inherit; cursor: pointer; }
           <div class="feature-icon"><i class="ti ti-bolt" aria-hidden="true"></i></div>
           <div>
             <div class="feature-title">სწრაფი შედეგი</div>
-            <div class="feature-desc">პირველი შედეგი 2-3 კვირაში, სრული ეფექტი მე-8 კვირიდან</div>
+            <div class="feature-desc">პირველი შედეგი 3-4 კვირიდან, რეალურ ეფექტზე გასვლა მერვე კვირიდან</div>
           </div>
         </div>
         <div class="feature-item">
@@ -1141,6 +1155,53 @@ button { font-family: inherit; cursor: pointer; }
   </div>
 </section>
 
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="section-header">
+    <div class="section-tag">✦ ხშირად დასმული კითხვები</div>
+    <h2>გაქვს კითხვა?</h2>
+    <p class="section-subtitle">ყველაზე ხშირი კითხვები IPL ეპილაციასა და ჩვენს სერვისზე</p>
+  </div>
+  <div class="faq-wrap">
+
+    <details class="faq-item">
+      <summary>როგორ მუშაობს IPL ეპილატორი? <i class="ti ti-chevron-down" aria-hidden="true"></i></summary>
+      <p>IPL (Intense Pulsed Light) სინათლის იმპულსს გზავნის კანში. ეს სინათლე შთაინთქმება თმის მელანინში, გარდაიქმნება სითბოდ და აზიანებს თმის ფოლიკულას — შედეგად თმის ზრდა თანდათან ნელდება და მცირდება.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>მტკივა თუ არა პროცედურა? <i class="ti ti-chevron-down" aria-hidden="true"></i></summary>
+      <p>IPL ეპილაცია უმტკივნეულოა. შესაძლოა იგრძნო მსუბუქი სითბო ან ჩხვლეტა, მაგრამ ჩვენი მოდელების უმეტესობას აქვს Ice Cooling გაგრილების ფუნქცია, რომელიც პროცედურას კიდევ უფრო კომფორტულს ხდის.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>რამდენ ხანში ჩანს შედეგი? <i class="ti ti-chevron-down" aria-hidden="true"></i></summary>
+      <p>პირველი ხილული შედეგი ჩვეულებრივ 3-4 კვირიდან ჩანს, ხოლო რეალურ ეფექტზე გასვლა მერვე კვირიდან იწყება. შედეგი ინდივიდუალურია და დამოკიდებულია თმისა და კანის ტიპზე.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>რა პერიოდულობით უნდა გამოვიყენო? <i class="ti ti-chevron-down" aria-hidden="true"></i></summary>
+      <p>პირველი 4-6 კვირის განმავლობაში რეკომენდებულია გამოყენება კვირაში ერთხელ. ხილული შედეგის მიღების შემდეგ შეგიძლია გადახვიდე შემანარჩუნებელ რეჟიმზე — თვეში 1-2 პროცედურა.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>ყველა კანისა და თმის ტიპს უხდება? <i class="ti ti-chevron-down" aria-hidden="true"></i></summary>
+      <p>IPL საუკეთესოდ მუშაობს ღია კანსა და მუქ თმაზე. ძალიან ღია (ჭაღარა, ქერა) ან წითელ თმაზე, ასევე ძალიან მუქ კანზე ეფექტი შეიძლება შეზღუდული იყოს. თუ ეჭვი გაქვს, მოგვწერე Messenger-ში — დაგეხმარებით სწორი მოდელის შერჩევაში.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>აქვს თუ არა აპარატს გარანტია? <i class="ti ti-chevron-down" aria-hidden="true"></i></summary>
+      <p>დიახ, ყველა აპარატს აქვს ოფიციალური გარანტია. ყველა საგარანტიო დეტალი ფიქსირდება Messenger-მიმოწერაში, ამიტომ შეკვეთა სწორედ იქ უნდა გააფორმო — ასე შენი გარანტია ყოველთვის დაცული იქნება.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>როგორ ხდება მიწოდება და გადახდა? <i class="ti ti-chevron-down" aria-hidden="true"></i></summary>
+      <p>მიწოდება უფასოა მთელი საქართველოს მასშტაბით. შეკვეთის გაფორმების შემდეგ დაგიკავშირდებით დეტალების დასაზუსტებლად. გადახდა შესაძლებელია კურიერთან, ადგილზე.</p>
+    </details>
+
+  </div>
+</section>
+
 <!-- CTA -->
 <section class="cta-section">
   <h2>მზად ხარ <span class="accent">ცვლილებისთვის?</span></h2>
@@ -1169,9 +1230,9 @@ button { font-family: inherit; cursor: pointer; }
     <div>
       <div class="footer-title">დახმარება</div>
       <div class="footer-links">
-        <a href="#">FAQ</a>
-        <a href="#">მიწოდება</a>
-        <a href="#">გარანტია</a>
+        <a href="#faq">FAQ</a>
+        <a href="#faq">მიწოდება</a>
+        <a href="#faq">გარანტია</a>
       </div>
     </div>
     <div>
@@ -1192,8 +1253,10 @@ button { font-family: inherit; cursor: pointer; }
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
+    const href = this.getAttribute('href');
+    if (href === '#' || href.length < 2) return;
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
+    const target = document.querySelector(href);
     if (target) target.scrollIntoView({ behavior: 'smooth' });
   });
 });

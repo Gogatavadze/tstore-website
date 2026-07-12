@@ -199,6 +199,7 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 /* Hero visual */
+.hero-img { width:100%; height:100%; object-fit:cover; border-radius:24px; display:block; }
 .hero-visual {
   position: relative;
   aspect-ratio: 1;
@@ -819,8 +820,8 @@ button { font-family: inherit; cursor: pointer; }
     </div>
     <div class="hero-stats">
       <div>
-        <div class="stat-number">6</div>
-        <div class="stat-label">მოდელი ნებისმიერი ბიუჯეტისთვის</div>
+        <div class="stat-number">4</div>
+        <div class="stat-label">IPL მოდელი</div>
       </div>
       <div>
         <div class="stat-number">4.9 ★</div>
@@ -834,32 +835,7 @@ button { font-family: inherit; cursor: pointer; }
   </div>
   
   <div class="hero-visual">
-    <div class="circle-decor-1"></div>
-    <div class="circle-decor-2"></div>
-    <svg width="220" height="320" viewBox="0 0 220 320" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="device" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#ffffff"/>
-          <stop offset="100%" stop-color="#e8e8e8"/>
-        </linearGradient>
-      </defs>
-      <rect x="60" y="20" width="100" height="280" rx="50" fill="url(#device)" stroke="#d4d4d4" stroke-width="1"/>
-      <rect x="75" y="40" width="70" height="80" rx="8" fill="#1a1a1a"/>
-      <rect x="80" y="50" width="60" height="60" rx="4" fill="#d85a30" opacity="0.9"/>
-      <circle cx="110" cy="80" r="20" fill="#ffffff" opacity="0.3"/>
-      <circle cx="110" cy="180" r="18" fill="#f0f0f0" stroke="#d4d4d4"/>
-      <text x="110" y="185" text-anchor="middle" font-size="10" fill="#888">PWR</text>
-      <rect x="90" y="220" width="40" height="4" rx="2" fill="#d4d4d4"/>
-      <rect x="90" y="232" width="40" height="4" rx="2" fill="#d4d4d4"/>
-      <rect x="90" y="244" width="40" height="4" rx="2" fill="#d4d4d4"/>
-    </svg>
-    <div class="float-badge float-badge-1">
-      <div style="color: #1d9e75; font-weight: 600;">✓ CE · ROHS · FCC</div>
-    </div>
-    <div class="float-badge float-badge-2">
-      <div style="color: #6a6a6a;">1 000 000</div>
-      <div style="font-weight: 600;">სინათლის იმპულსი</div>
-    </div>
+    <img src="images/products/bhrl-13/1.webp" alt="IPL ფოტოეპილატორი BHRL-13 — ბესტსელერი" class="hero-img" loading="eager">
   </div>
 </section>
 
@@ -889,12 +865,13 @@ button { font-family: inherit; cursor: pointer; }
   <div class="section-header">
     <div class="section-tag">✦ ჩვენი კოლექცია</div>
     <h2>აირჩიე შენი იდეალური მოდელი</h2>
-    <p class="section-subtitle">ოთხი მოდელი, ერთი მიზანი — სრულყოფილად გლუვი კანი ნებისმიერი ბიუჯეტისთვის</p>
+    <p class="section-subtitle">ოთხი მოდელი, ერთი მიზანი — სრულყოფილად გლუვი კანი სახლის კომფორტში</p>
   </div>
   
   <div class="products-grid">
     
-    <a class="product-card" href="products/bhrl-13.html">
+    <a class="product-card featured" href="products/bhrl-13.html">
+      <div class="product-badge badge-bestseller">ბესტსელერი</div>
       <div class="product-image">
         <img src="images/products/bhrl-13/1.webp" alt="IPL ფოტოეპილატორი BHRL-13" loading="lazy" onerror="this.parentElement.classList.add('noimg')">
         <div class="img-fallback"><i class="ti ti-photo" aria-hidden="true"></i></div>
@@ -941,13 +918,12 @@ button { font-family: inherit; cursor: pointer; }
     </a>
 -->
     
-    <a class="product-card featured" href="products/bhrl-11.html">
-      <div class="product-badge badge-bestseller">ბესტსელერი</div>
+    <a class="product-card" href="products/bhrl-11.html">
       <div class="product-image">
         <img src="images/products/bhrl-11/1.webp" alt="IPL ფოტოეპილატორი BHRL-11" loading="lazy" onerror="this.parentElement.classList.add('noimg')">
         <div class="img-fallback"><i class="ti ti-photo" aria-hidden="true"></i></div>
       </div>
-      <div class="product-category">ბესტსელერი</div>
+      <div class="product-category">ხალხის რჩეული</div>
       <div class="product-name">BHRL-11</div>
       <div class="product-desc">24ჯ · 9 დონე · Ice Cooling · ხალხის რჩეული</div>
       <div class="product-price">
@@ -1005,8 +981,8 @@ button { font-family: inherit; cursor: pointer; }
         <tr><th>მოდელი</th><th>ენერგია</th><th>დონეები</th><th>გაგრილება</th><th>იმპულსები</th><th>ფასი</th><th></th></tr>
       </thead>
       <tbody>
-        <tr>
-          <td><a href="products/bhrl-13.html">BHRL-13</a></td>
+        <tr class="cmp-featured">
+          <td><a href="products/bhrl-13.html">BHRL-13</a> <span class="cmp-star">★</span></td>
           <td>24 ჯ</td>
           <td>9</td>
           <td><i class="ti ti-check yes"></i></td>
@@ -1034,8 +1010,8 @@ button { font-family: inherit; cursor: pointer; }
           <td><a class="cmp-btn" href="products/bhrl-10.html">ნახვა</a></td>
         </tr>
 -->
-        <tr class="cmp-featured">
-          <td><a href="products/bhrl-11.html">BHRL-11</a> <span class="cmp-star">★</span></td>
+        <tr>
+          <td><a href="products/bhrl-11.html">BHRL-11</a></td>
           <td>24 ჯ</td>
           <td>9</td>
           <td><i class="ti ti-check yes"></i></td>

@@ -2,10 +2,10 @@
 
 /* ───────────────────────────────────────────────
    შეკვეთების მიღება:
-   1) Make.com-ში შექმენი სცენარი Webhook ტრიგერით
-   2) ჩასვი Webhook-ის URL ქვემოთ, ბრჭყალებში
-   3) ცარიელად დატოვების შემთხვევაში ღილაკი
-      მომხმარებელს Messenger-ზე გადაამისამართებს
+   • ნაგულისხმევად: შეკვეთა იკოპირება და Messenger იხსნება,
+     სადაც მომხმარებელი მონაცემებს ჩასვამს და გააგზავნის.
+   • სურვილისამებრ: ჩასვი Make.com Webhook-ის URL ქვემოთ —
+     მაშინ შეკვეთა ავტომატურადაც გაიგზავნება (Messenger-ის გვერდით).
 ─────────────────────────────────────────────── */
 const ORDER_WEBHOOK_URL = "";  // ← მაგ: "https://hook.eu2.make.com/xxxxxxxx"
 const MESSENGER_URL = "https://m.me/61556465853536";
@@ -42,56 +42,86 @@ function qty(d) {
   el.textContent = Math.max(1, parseInt(el.textContent) + d);
 }
 
+/* ტექსტის კოპირება (clipboard + fallback) */
+function copyText(t) {
+  try {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(t);
+      return;
+    }
+  } catch (e) {}
+  try {
+    const ta = document.createElement('textarea');
+    ta.value = t;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+  } catch (e) {}
+}
+
 /* შეკვეთის გაგზავნა */
 async function submitOrder(slug, model, price) {
-  const phone = document.getElementById('ordPhone').value.trim();
-  const name = document.getElementById('ordName').value.trim();
+  const name    = (document.getElementById('ordName')    || {}).value?.trim() || '';
+  const surname = (document.getElementById('ordSurname') || {}).value?.trim() || '';
+  const phone   = (document.getElementById('ordPhone')   || {}).value?.trim() || '';
+  const address = (document.getElementById('ordAddress') || {}).value?.trim() || '';
   const quantity = parseInt(document.getElementById('ordQty').textContent);
   const msg = document.getElementById('ordMsg');
   msg.className = 'modal-msg';
+  msg.innerHTML = '';
 
+  /* ვალიდაცია */
+  if (!name || !surname) {
+    msg.textContent = 'გთხოვ, მიუთითე სახელი და გვარი';
+    msg.classList.add('err'); return;
+  }
   if (phone.replace(/\D/g, '').length < 9) {
     msg.textContent = 'გთხოვ, მიუთითე სწორი ტელეფონის ნომერი';
-    msg.classList.add('err');
-    return;
+    msg.classList.add('err'); return;
+  }
+  if (!address) {
+    msg.textContent = 'გთხოვ, მიუთითე სრული მისამართი';
+    msg.classList.add('err'); return;
   }
 
-  if (!ORDER_WEBHOOK_URL) {
-    // Webhook არ არის მითითებული — Messenger-ზე გადამისამართება
-    window.open(MESSENGER_URL, '_blank');
-    msg.textContent = 'გადადი Messenger-ში და მოგვწერე — მალე გიპასუხებთ!';
-    msg.classList.add('ok');
-    return;
+  const total = price * quantity;
+  const orderText =
+    '🛒 ახალი შეკვეთა — ' + model + '\n' +
+    '👤 ' + name + ' ' + surname + '\n' +
+    '📞 ' + phone + '\n' +
+    '📍 ' + address + '\n' +
+    '🔢 რაოდენობა: ' + quantity + ' ცალი\n' +
+    '💰 ჯამი: ' + total + ' ₾';
+
+  /* სურვილისამებრ — Make.com Webhook (თუ მითითებულია) */
+  if (ORDER_WEBHOOK_URL) {
+    try {
+      await fetch(ORDER_WEBHOOK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          source: 'tstore.ge', model, slug, price, quantity,
+          name, surname, phone, address, total,
+          time: new Date().toISOString()
+        })
+      });
+    } catch (e) { /* ვაგრძელებთ Messenger-ით */ }
   }
 
-  const btn = document.getElementById('ordSubmit');
-  btn.disabled = true;
-  btn.textContent = 'იგზავნება…';
+  /* კოპირება + Messenger */
+  copyText(orderText);
+  window.open(MESSENGER_URL, '_blank');
 
-  try {
-    const res = await fetch(ORDER_WEBHOOK_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        source: 'tstore.ge',
-        model: model,
-        slug: slug,
-        price: price,
-        quantity: quantity,
-        name: name,
-        phone: phone,
-        total: price * quantity,
-        time: new Date().toISOString()
-      })
-    });
-    if (!res.ok) throw new Error();
-    msg.textContent = '✓ შეკვეთა მიღებულია! მალე დაგიკავშირდებით.';
-    msg.classList.add('ok');
-    btn.textContent = '✓ გაგზავნილია';
-  } catch (e) {
-    msg.textContent = 'შეცდომა გაგზავნისას — სცადე ზარი ან Messenger';
-    msg.classList.add('err');
-    btn.disabled = false;
-    btn.textContent = 'შეკვეთის გაგზავნა';
-  }
+  msg.classList.add('ok');
+  msg.innerHTML = '✓ შეკვეთა დაკოპირდა და Messenger გაიხსნა — ჩასვი (Paste) და გააგზავნე.' +
+    '<div style="font-size:12px;opacity:.75;margin-top:6px">თუ ავტომატურად არ ჩაისვა, ქვემოთ ხელით დააკოპირე:</div>';
+  const pre = document.createElement('textarea');
+  pre.value = orderText;
+  pre.readOnly = true;
+  pre.onclick = function(){ this.select(); };
+  pre.style.cssText = 'width:100%;margin-top:8px;min-height:104px;border:1px solid #e5e5e5;border-radius:8px;padding:10px;font-size:13px;font-family:inherit;resize:vertical;';
+  msg.appendChild(pre);
 }

@@ -23,6 +23,7 @@ document.querySelectorAll('.thumb').forEach(t => {
 function openOrder() {
   document.getElementById('orderModal').classList.add('open');
   document.body.style.overflow = 'hidden';
+  if (typeof fbq === 'function') fbq('track', 'InitiateCheckout');
 }
 function closeOrder() {
   document.getElementById('orderModal').classList.remove('open');
@@ -71,6 +72,14 @@ async function submitOrder(slug, model, price) {
       body: JSON.stringify({ source:'tstore.ge', slug, model, price, quantity, name, surname, phone, address, total })
     });
   } catch (e) { /* Messenger ისედაც გაიხსნა — კომუნიკაცია იქ გაგრძელდება */ }
+
+  /* Meta Pixel — შეკვეთა გაფორმდა */
+  if (typeof fbq === 'function') {
+    fbq('track', 'Lead', {
+      content_ids: [slug], content_type: 'product', content_name: model,
+      value: total, currency: 'GEL', num_items: quantity
+    });
+  }
 
   /* წარმატების ეკრანი — კონტაქტი Messenger-ზე */
   msg.classList.add('ok');

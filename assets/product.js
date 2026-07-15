@@ -5,6 +5,7 @@
    სადაც კომუნიკაცია გრძელდება. */
 const ORDER_ENDPOINT = "/api/order";
 const MESSENGER_URL  = "https://m.me/61556465853536";
+const PIXEL_ID       = "1021772267384855";
 
 /* გალერეა */
 document.querySelectorAll('.thumb').forEach(t => {
@@ -39,6 +40,14 @@ function qty(d) {
   el.textContent = Math.max(1, parseInt(el.textContent) + d);
 }
 
+/* ტელეფონის ნორმალიზება Meta-სთვის: 558610154 → 995558610154 */
+function normalizePhone(raw) {
+  let p = (raw || '').replace(/\D/g, '');
+  if (p.startsWith('00')) p = p.slice(2);
+  if (p.length === 9 && p.startsWith('5')) p = '995' + p;
+  return p;
+}
+
 /* შეკვეთის გაგზავნა */
 async function submitOrder(slug, model, price) {
   const gv = id => (document.getElementById(id) && document.getElementById(id).value) ? document.getElementById(id).value.trim() : '';
@@ -61,7 +70,40 @@ async function submitOrder(slug, model, price) {
   btn.disabled = true;
   btn.textContent = 'იგზავნება…';
 
-  /* Messenger ვხსნით მაშინვე (მომხმარებლის დაჭერის კონტექსტში, რომ ბრაუზერმა არ დაბლოკოს) */
+  /* ---- Meta Pixel: Advanced Matching + Purchase ----
+     ვისვრით მაშინვე, fetch-ზე ადრე — რომ ქსელის შეცდომამ ან ნელმა
+     პასუხმა ივენთი არ დაკარგოს. */
+  if (typeof fbq === 'function') {
+    /* Advanced Matching — მონაცემები ბრაუზერშივე იშიფრება (SHA-256) */
+    try {
+      fbq('init', PIXEL_ID, {
+        fn: name.toLowerCase(),
+        ln: surname.toLowerCase(),
+        ph: normalizePhone(phone),
+        ct: address.toLowerCase(),
+        country: 'ge'
+      });
+    } catch (e) { /* Advanced Matching არასავალდებულოა */ }
+
+    const eventId = 'ord-' + Date.now() + '-' + Math.random().toString(36).slice(2, 8);
+    const params = {
+      content_ids: [slug],
+      content_type: 'product',
+      content_name: model,
+      contents: [{ id: slug, quantity: quantity, item_price: price }],
+      value: total,
+      currency: 'GEL',
+      num_items: quantity
+    };
+
+    /* მთავარი ივენთი — Sales კამპანია ამაზე ოპტიმიზდება */
+    fbq('track', 'Purchase', params, { eventID: eventId });
+
+    /* Lead — ვტოვებთ სამომავლოდ (ხელს არ უშლის) */
+    fbq('track', 'Lead', params, { eventID: eventId + '-lead' });
+  }
+
+  /* Messenger ვხსნით (მომხმარებლის დაჭერის კონტექსტში, რომ ბრაუზერმა არ დაბლოკოს) */
   const mWin = window.open(MESSENGER_URL, '_blank');
 
   /* შეკვეთას ვაგზავნით Telegram-ში (ფონურად) */
@@ -72,14 +114,6 @@ async function submitOrder(slug, model, price) {
       body: JSON.stringify({ source:'tstore.ge', slug, model, price, quantity, name, surname, phone, address, total })
     });
   } catch (e) { /* Messenger ისედაც გაიხსნა — კომუნიკაცია იქ გაგრძელდება */ }
-
-  /* Meta Pixel — შეკვეთა გაფორმდა */
-  if (typeof fbq === 'function') {
-    fbq('track', 'Lead', {
-      content_ids: [slug], content_type: 'product', content_name: model,
-      value: total, currency: 'GEL', num_items: quantity
-    });
-  }
 
   /* წარმატების ეკრანი — კონტაქტი Messenger-ზე */
   msg.classList.add('ok');

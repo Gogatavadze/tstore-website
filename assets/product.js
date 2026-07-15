@@ -7,6 +7,11 @@ const ORDER_ENDPOINT = "/api/order";
 const MESSENGER_URL  = "https://m.me/61556465853536";
 const PIXEL_ID       = "1021772267384855";
 
+/* Meta არ იღებს GEL-ს — ივენთებს USD-ში ვაგზავნით.
+   კურსის შეცვლისას მხოლოდ ეს ერთი ციფრი გაასწორე. */
+const GEL_TO_USD = 0.37;
+const toUsd = gel => Math.round(gel * GEL_TO_USD * 100) / 100;
+
 /* გალერეა */
 document.querySelectorAll('.thumb').forEach(t => {
   t.addEventListener('click', () => {
@@ -90,9 +95,9 @@ async function submitOrder(slug, model, price) {
       content_ids: [slug],
       content_type: 'product',
       content_name: model,
-      contents: [{ id: slug, quantity: quantity, item_price: price }],
-      value: total,
-      currency: 'GEL',
+      contents: [{ id: slug, quantity: quantity, item_price: toUsd(price) }],
+      value: toUsd(total),
+      currency: 'USD',
       num_items: quantity
     };
 

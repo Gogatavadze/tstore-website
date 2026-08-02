@@ -69,31 +69,24 @@ button { font-family: inherit; cursor: pointer; }
   align-items: center;
 }
 
-.nav-icons i {
-  font-size: 22px;
-  cursor: pointer;
-  transition: color 0.2s;
-}
-
-.nav-icons i:hover { color: #d85a30; }
-
-.cart-badge {
-  position: relative;
-}
-
-.cart-count {
-  position: absolute;
-  top: -6px;
-  right: -8px;
-  background: #d85a30;
-  color: white;
-  font-size: 10px;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
+.nav-messenger {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 9px 16px;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.nav-messenger i { font-size: 18px; }
+
+.nav-messenger:hover {
+  background: #d85a30;
+  border-color: #d85a30;
+  color: #ffffff;
 }
 
 /* Hero */
@@ -813,12 +806,10 @@ src="https://www.facebook.com/tr?id=1021772267384855&ev=PageView&noscript=1"
     <a href="#faq">FAQ</a>
   </div>
   <div class="nav-icons">
-    <i class="ti ti-search" aria-hidden="true"></i>
-    <i class="ti ti-heart" aria-hidden="true"></i>
-    <div class="cart-badge">
-      <i class="ti ti-shopping-bag" aria-hidden="true"></i>
-      <span class="cart-count">0</span>
-    </div>
+    <a class="nav-messenger" href="https://m.me/61556465853536" target="_blank" rel="noopener">
+      <i class="ti ti-brand-messenger" aria-hidden="true"></i>
+      <span>მოგვწერე</span>
+    </a>
   </div>
 </nav>
 
@@ -1257,23 +1248,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     e.preventDefault();
     const target = document.querySelector(href);
     if (target) target.scrollIntoView({ behavior: 'smooth' });
-  });
-});
-
-// Add to cart simulation
-document.querySelectorAll('.btn-cart').forEach(btn => {
-  btn.addEventListener('click', function(e) {
-    e.stopPropagation();
-    const cartCount = document.querySelector('.cart-count');
-    cartCount.textContent = parseInt(cartCount.textContent) + 1;
-    
-    const original = this.textContent;
-    this.textContent = '✓ დამატებულია';
-    this.style.background = '#1d9e75';
-    setTimeout(() => {
-      this.textContent = original;
-      this.style.background = '';
-    }, 1500);
   });
 });
 </script>

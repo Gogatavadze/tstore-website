@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Tstore.ge - პრემიუმ კლასის IPL ფოტოეპილატორები საქართველოში. უმტკივნეულო, უსაფრთხო, ეფექტური — უფასო მიწოდება მთელი საქართველოს მასშტაბით.">
+<meta name="keywords" content="IPL ეპილატორი, ეპილაცია, თმის მოცილება, სილამაზის მოწყობილობა, Tstore">
+<title>Tstore.ge - პრემიუმ IPL ეპილატორები</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Noto Sans Georgian', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #1a1a1a;
+  background: #ffffff;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; }
+
+/* Top announcement bar */
+.announcement {
+  background: #0a0a0a;
+  color: #ffffff;
+  padding: 10px 24px;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 0.3px;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 48px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  font-size: 14px;
+  color: #4a4a4a;
+}
+
+.nav-links a:hover { color: #d85a30; }
+
+.nav-icons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.nav-messenger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 9px 16px;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.nav-messenger i { font-size: 18px; }
+
+.nav-messenger:hover {
+  background: #d85a30;
+  border-color: #d85a30;
+  color: #ffffff;
+}
+
+/* Hero */
+.hero {
+  padding: 80px 48px 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  background: linear-gradient(180deg, #fafaf8 0%, #ffffff 100%);
+}
+
+.hero-badge {
+  display: inline-block;
+  background: #fef0e8;
+  color: #993c1d;
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 24px;
+  letter-spacing: 0.5px;
+}
+
+.hero h1 {
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 1.1;
+  margin: 0 0 24px;
+  letter-spacing: -1.5px;
+}
+
+.hero h1 .accent {
+  font-style: italic;
+  color: #d85a30;
+  font-weight: 500;
+}
+
+.hero p {
+  font-size: 17px;
+  color: #6a6a6a;
+  line-height: 1.6;
+  margin: 0 0 36px;
+  max-width: 460px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: #0a0a0a;
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  font-size: 15px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background: #d85a30;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #0a0a0a;
+  border: 1px solid #0a0a0a;
+  padding: 16px 32px;
+  font-size: 15px;
+  border-radius: 4px;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.btn-secondary:hover {
+  background: #0a0a0a;
+  color: white;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.stat-number {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #6a6a6a;
+  letter-spacing: 0.5px;
+}
+
+/* Hero visual */
+.hero-img { width:100%; height:100%; object-fit:cover; border-radius:24px; display:block; }
+.hero-visual {
+  position: relative;
+  aspect-ratio: 1;
+  background: linear-gradient(135deg, #f8e8e0 0%, #fff5f0 100%);
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.circle-decor-1, .circle-decor-2 {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(216,90,48,0.15);
+  animation: pulse 4s ease-in-out infinite;
+}
+
+.circle-decor-1 { width: 380px; height: 380px; }
+.circle-decor-2 { 
+  width: 280px; 
+  height: 280px; 
+  border-color: rgba(216,90,48,0.2);
+  animation-delay: 1s;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+}
+
+.float-badge {
+  position: absolute;
+  background: white;
+  padding: 12px 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  font-size: 12px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.float-badge-1 { top: 40px; right: 40px; }
+.float-badge-2 { bottom: 60px; left: 30px; animation-delay: 1.5s; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Trust strip */
+.trust-strip {
+  padding: 32px 48px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  background: #fafaf8;
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.trust-item i {
+  font-size: 28px;
+  color: #1a1a1a;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.trust-title {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.trust-subtitle {
+  font-size: 11px;
+  color: #6a6a6a;
+}
+
+/* Section common */
+.section {
+  padding: 100px 48px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.section-tag {
+  font-size: 12px;
+  color: #d85a30;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.section h2 {
+  font-size: 42px;
+  font-weight: 600;
+  margin: 0 0 16px;
+  letter-spacing: -1px;
+  line-height: 1.1;
+}
+
+.section h2 .accent {
+  font-style: italic;
+  color: #d85a30;
+  font-weight: 500;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  color: #6a6a6a;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Products */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.product-card {
+  background: #fafaf8;
+  border-radius: 16px;
+  padding: 32px 24px;
+  transition: all 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.product-card.featured {
+  background: #fef0e8;
+  border: 2px solid #d85a30;
+}
+
+.product-badge {
+  position: absolute;
+  top: -12px;
+  left: 24px;
+  color: white;
+  font-size: 11px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.badge-bestseller { background: #d85a30; }
+.badge-new { background: #1d9e75; }
+
+.product-image {
+  aspect-ratio: 1;
+  background: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.product-category {
+  font-size: 11px;
+  color: #6a6a6a;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.product-card.featured .product-category { color: #993c1d; }
+
+.product-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.product-desc {
+  font-size: 13px;
+  color: #6a6a6a;
+  margin-bottom: 16px;
+}
+
+.product-price {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.price-current {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.price-old {
+  font-size: 14px;
+  color: #6a6a6a;
+  text-decoration: line-through;
+}
+
+.btn-cart {
+  width: 100%;
+  margin-top: 16px;
+  background: #0a0a0a;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.btn-cart:hover { background: #d85a30; }
+
+.product-card.featured .btn-cart { background: #d85a30; }
+.product-card.featured .btn-cart:hover { background: #0a0a0a; }
+
+/* Why choose */
+.why-section {
+  padding: 100px 48px;
+  background: #0a0a0a;
+  color: white;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.why-section h2 { color: white; }
+
+.why-section p {
+  font-size: 16px;
+  color: #b0b0b0;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.feature-list {
+  display: grid;
+  gap: 24px;
+}
+
+.feature-item {
+  display: flex;
+  gap: 20px;
+  align-items: start;
+}
+
+.feature-icon {
+  background: #d85a30;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.feature-icon i { font-size: 22px; color: white; }
+
+.feature-title {
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.feature-desc {
+  font-size: 14px;
+  color: #b0b0b0;
+  line-height: 1.6;
+}
+
+.stat-card {
+  aspect-ratio: 1;
+  background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(216,90,48,0.15) 0%, transparent 50%);
+  top: -50%;
+  left: -50%;
+}
+
+.stat-content { text-align: center; z-index: 1; position: relative; }
+
+.stat-big {
+  font-size: 96px;
+  font-weight: 600;
+  line-height: 1;
+  color: #d85a30;
+  margin-bottom: 8px;
+}
+
+.stat-big-percent { font-size: 48px; }
+
+.stat-title {
+  font-size: 18px;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.stat-subtitle {
+  font-size: 13px;
+  color: #b0b0b0;
+}
+
+/* Reviews */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.review-card {
+  background: #fafaf8;
+  padding: 32px;
+  border-radius: 16px;
+  transition: transform 0.3s;
+}
+
+.review-card:hover { transform: translateY(-4px); }
+
+.review-stars {
+  color: #d85a30;
+  margin-bottom: 16px;
+  letter-spacing: 4px;
+  font-size: 18px;
+}
+
+.review-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #1a1a1a;
+  margin: 0 0 24px;
+}
+
+.review-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.author-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f8e8e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #993c1d;
+}
+
+.author-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.author-detail {
+  font-size: 12px;
+  color: #6a6a6a;
+}
+
+/* CTA */
+.cta-section {
+  padding: 100px 48px;
+  background: linear-gradient(135deg, #fef0e8 0%, #f8e8e0 100%);
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.cta-section p {
+  font-size: 17px;
+  color: #4a4a4a;
+  max-width: 480px;
+  margin: 0 auto 32px;
+}
+
+/* Footer */
+.footer {
+  background: #0a0a0a;
+  color: white;
+  padding: 60px 48px 32px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+.footer-brand {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.footer-desc {
+  font-size: 13px;
+  color: #888;
+  line-height: 1.6;
+}
+
+.footer-title {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 13px;
+  color: #888;
+}
+
+.footer-links a:hover { color: #d85a30; }
+
+.footer-bottom {
+  border-top: 1px solid #2a2a2a;
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #666;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+  .nav { padding: 16px 20px; }
+  .nav-links { display: none; }
+  .hero { 
+    grid-template-columns: 1fr; 
+    padding: 40px 20px 60px;
+    gap: 40px;
+  }
+  .hero h1 { font-size: 36px; }
+  .hero p { font-size: 15px; }
+  .hero-stats { gap: 20px; }
+  .stat-number { font-size: 22px; }
+  
+  .trust-strip { padding: 20px; }
+  .trust-grid { 
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .section { padding: 60px 20px; }
+  .section h2 { font-size: 28px; }
+  
+  .products-grid { 
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .why-section { padding: 60px 20px; }
+  .why-grid { 
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .stat-big { font-size: 72px; }
+  
+  .reviews-grid { 
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .cta-section { padding: 60px 20px; }
+  .cta-section h2 { font-size: 32px; }
+  
+  .footer { padding: 40px 20px 24px; }
+  .footer-grid { 
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+  
+  .hero-buttons { flex-direction: column; }
+  .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+}
+
+/* Product card images (real photos) */
+.product-card { display: block; }
+.product-image { position: relative; overflow: hidden; }
+.product-image img { width: 100%; height: 100%; object-fit: contain; }
+.product-image .img-fallback { display: none; position: absolute; inset: 0; align-items: center; justify-content: center; color: #c9b9ae; font-size: 40px; }
+.product-image.noimg img { display: none; }
+.product-image.noimg .img-fallback { display: flex; }
+.btn-cart { display: flex; align-items: center; justify-content: center; gap: 8px; }
+
+/* Comparison table */
+.cmp-wrap { max-width: 1040px; margin: 0 auto; overflow-x: auto; border: 1px solid rgba(0,0,0,0.08); border-radius: 16px; }
+.cmp-table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 720px; background: #fff; }
+.cmp-table th { text-align: left; padding: 14px 16px; background: #faf7f5; font-weight: 600; font-size: 13px; color: #6a6a6a; letter-spacing: .3px; }
+.cmp-table td { padding: 13px 16px; border-top: 1px solid rgba(0,0,0,0.06); }
+.cmp-table td a { font-weight: 600; }
+.cmp-table td a:hover { color: #d85a30; }
+.cmp-table .yes { color: #1d9e75; font-size: 18px; }
+.cmp-table .no { color: #c9c9c9; font-size: 18px; }
+.cmp-star { color: #d85a30; }
+.cmp-featured { background: #fdf6f2; }
+.cmp-price s { color: #9a9a9a; font-size: 12.5px; margin-right: 4px; }
+.cmp-btn { display: inline-block; padding: 7px 16px; border: 1px solid rgba(0,0,0,0.12); border-radius: 8px; font-size: 13px; font-weight: 500; transition: all .2s; }
+.cmp-btn:hover { background: #d85a30; border-color: #d85a30; color: #fff; }
+
+/* FAQ accordion */
+.faq-wrap { max-width: 760px; margin: 0 auto; }
+.faq-item {
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  margin-bottom: 12px;
+  background: #fff;
+  overflow: hidden;
+}
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 20px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary i {
+  font-size: 20px;
+  color: #d85a30;
+  transition: transform 0.25s;
+  flex-shrink: 0;
+}
+.faq-item[open] summary i { transform: rotate(180deg); }
+.faq-item p {
+  padding: 0 24px 20px;
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #6a6a6a;
+}
+.faq-item[open] summary { color: #d85a30; }
+
+</style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1021772267384855');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1021772267384855&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code --></head>
+<body>
+
+<!-- Top announcement bar -->
+<div class="announcement">უფასო მიწოდება მთელი საქართველოს მასშტაბით</div>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="logo">TSTORE</div>
+  <div class="nav-links">
+    <a href="#hero">მთავარი</a>
+    <a href="#products">პროდუქტები</a>
+    <a href="#why">ჩვენ შესახებ</a>
+    <a href="#reviews">შეფასებები</a>
+    <a href="#faq">FAQ</a>
+  </div>
+  <div class="nav-icons">
+    <a class="nav-messenger" href="https://m.me/61556465853536" target="_blank" rel="noopener">
+      <i class="ti ti-brand-messenger" aria-hidden="true"></i>
+      <span>მოგვწერე</span>
+    </a>
+  </div>
+</nav>
+
+<!-- HERO Section -->
+<section class="hero" id="hero">
+  <div>
+    <div class="hero-badge">✦ პრემიუმ ხარისხი · #1 საქართველოში</div>
+    <h1>შენი ესთეტიკისა<br>და <span class="accent">სილამაზისთვის</span> <span class="accent">♥</span></h1>
+    <p>პრემიუმ კლასის IPL ფოტოეპილატორები — სახლის პირობებში კომფორტული პროცედურების გარანტია. უმტკივნეულო, უსაფრთხო, ეფექტური.</p>
+    <div class="hero-buttons">
+      <button class="btn-primary" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+        შეარჩიე შენი მოდელი
+        <i class="ti ti-arrow-right" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-number">5</div>
+        <div class="stat-label">IPL მოდელი</div>
+      </div>
+      <div>
+        <div class="stat-number">4.9 ★</div>
+        <div class="stat-label">საშუალო შეფასება</div>
+      </div>
+      <div>
+        <div class="stat-number">~2 თვე</div>
+        <div class="stat-label">საშუალო ხილული შედეგი</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="hero-visual">
+    <img src="images/products/bhrl-13/1.webp" alt="IPL ფოტოეპილატორი BHRL-13 — ბესტსელერი" class="hero-img" loading="eager">
+  </div>
+</section>
+
+<!-- Trust strip -->
+<section class="trust-strip">
+  <div class="trust-grid">
+    <div class="trust-item">
+      <i class="ti ti-truck-delivery" aria-hidden="true"></i>
+      <div class="trust-title">უფასო მიწოდება</div>
+      <div class="trust-subtitle">მთელი საქართველოს მასშტაბით</div>
+    </div>
+    <div class="trust-item">
+      <i class="ti ti-shield-check" aria-hidden="true"></i>
+      <div class="trust-title">ოფიციალური გარანტია</div>
+      <div class="trust-subtitle">ყველა აპარატზე</div>
+    </div>
+    <div class="trust-item">
+      <i class="ti ti-brand-messenger" aria-hidden="true"></i>
+      <div class="trust-title">სწრაფი მხარდაჭერა</div>
+      <div class="trust-subtitle">მოგვწერე Messenger-ში</div>
+    </div>
+  </div>
+</section>
+
+<!-- Products -->
+<section class="section" id="products">
+  <div class="section-header">
+    <div class="section-tag">✦ ჩვენი კოლექცია</div>
+    <h2>აირჩიე შენი იდეალური მოდელი</h2>
+    <p class="section-subtitle">ოთხი მოდელი, ერთი მიზანი — სრულყოფილად გლუვი კანი</p>
+  </div>
+  
+  <div class="products-grid">
+    
+    <a class="product-card featured" href="products/bhrl-13.html">
+      <div class="product-badge badge-bestseller">ბესტსელერი</div>
+      <div class="product-image">
+        <img src="images/products/bhrl-13/1.webp" alt="IPL ფოტოეპილატორი BHRL-13" loading="lazy" onerror="this.parentElement.classList.add('noimg')">
+        <div class="img-fallback"><i class="ti ti-photo" aria-hidden="true"></i></div>
+      </div>
+      <div class="product-category">ფლაგმანი</div>
+      <div class="product-name">BHRL-13</div>
+      <div class="product-desc">24ჯ · 9 დონე · Ice Cooling · 2 თავაკი</div>
+      <div class="product-price">
+        <span class="price-current">300 ₾</span>
+        <span class="price-old">395 ₾</span>
+      </div>
+      <span class="btn-cart">დეტალურად <i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+    </a>
+    
+    <a class="product-card" href="products/bhrl-12.html">
+      <div class="product-image">
+        <img src="images/products/bhrl-12/1.webp" alt="IPL ფოტოეპილატორი BHRL-12" loading="lazy" onerror="this.parentElement.classList.add('noimg')">
+        <div class="img-fallback"><i class="ti ti-photo" aria-hidden="true"></i></div>
+      </div>
+      <div class="product-category">პროფესიონალური</div>
+      <div class="product-name">BHRL-12</div>
+      <div class="product-desc">24ჯ · 9 დონე · Ice Cooling · სტაბილური დაჭერა</div>
+      <div class="product-price">
+        <span class="price-current">270 ₾</span>
+        <span class="price-old">365 ₾</span>
+      </div>
+      <span class="btn-cart">დეტალურად <i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+    </a>
+    
+    <!-- TEMP HIDDEN (მარაგში დაბრუნებისას გახსენი) 
+<a class="product-card" href="products/bhrl-10.html">
+      <div class="product-image">
+        <img src="images/products/bhrl-10/1.webp" alt="IPL ფოტოეპილატორი BHRL-10" loading="lazy" onerror="this.parentElement.classList.add('noimg')">
+        <div class="img-fallback"><i class="ti ti-photo" aria-hidden="true"></i></div>
+      </div>
+      <div class="product-category">კომპაქტური პრემიუმი</div>
+      <div class="product-name">BHRL-10</div>
+      <div class="product-desc">24ჯ · 9 დონე · Ice Cooling · მსუბუქი 255გ</div>
+      <div class="product-price">
+        <span class="price-current">220 ₾</span>
+        <span class="price-old">335 ₾</span>
+      </div>
+      <span class="btn-cart">დეტალურად <i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+    </a>
+-->
+    
+    <a class="product-card" href="products/bhrl-11.html">
+      <div class="product-image">
+        <img src="images/products/bhrl-11/1.webp" alt="IPL ფოტოეპილატორი BHRL-11" loading="lazy" onerror="this.parentElement.classList.add('noimg')">
+        <div class="img-fallback"><i class="ti ti-photo" aria-hidden="true"></i></div>
+      </div>
+      <div class="product-category">ხალხის რჩეული</div>
+      <div class="product-name">BHRL-11</div>
+      <div class="product-desc">24ჯ · 9 დონე · Ice Cooling · ხალხის რჩეული</div>
+      <div class="product-price">
+        <span class="price-current">200 ₾</span>
+        <span class="price-old">350 ₾</span>
+      </div>
+      <span class="btn-cart">დეტალურად <i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+    </a>
+    
+    <a class="product-card" href="products/bhrl-04.html">
+      <div class="product-image">
+        <img src="images/products/bhrl-04/1.webp" alt="IPL ფოტოეპილატორი BHRL-04" loading="lazy" onerror="this.parentElement.classList.add('noimg')">
+        <div class="img-fallback"><i class="ti ti-photo" aria-hidden="true"></i></div>
+      </div>
+      <div class="product-category">სენსორული</div>
+      <div class="product-name">BHRL-04</div>
+      <div class="product-desc">24ჯ · 9 დონე · Ice Cooling · სენსორული ეკრანი</div>
+      <div class="product-price">
+        <span class="price-current">150 ₾</span>
+        <span class="price-old">290 ₾</span>
+      </div>
+      <span class="btn-cart">დეტალურად <i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+    </a>
+    
+    <a class="product-card" href="products/tmy-002.html">
+      <div class="product-image">
+        <img src="images/products/tmy-002/1.webp" alt="IPL ეპილატორი TMY-002" loading="lazy" onerror="this.parentElement.classList.add('noimg')">
+        <div class="img-fallback"><i class="ti ti-photo" aria-hidden="true"></i></div>
+      </div>
+      <div class="product-category">საბაზისო</div>
+      <div class="product-name">TMY-002</div>
+      <div class="product-desc">12ჯ · 5 დონე · 1 000 000 იმპულსი</div>
+      <div class="product-price">
+        <span class="price-current">120 ₾</span>
+      </div>
+      <span class="btn-cart">დეტალურად <i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+    </a>
+    
+  </div>
+</section>
+
+
+<!-- Compare -->
+<section class="section" id="compare">
+  <div class="section-header">
+    <div class="section-tag">✦ შედარება</div>
+    <h2>რომელი მოდელია შენთვის?</h2>
+    <p class="section-subtitle">შეადარე ყველა მოდელი ერთ ცხრილში და იპოვე შენი იდეალური ვარიანტი</p>
+  </div>
+  <div class="cmp-wrap">
+    <table class="cmp-table">
+      <thead>
+        <tr><th>მოდელი</th><th>ენერგია</th><th>დონეები</th><th>გაგრილება</th><th>იმპულსები</th><th>ფასი</th><th></th></tr>
+      </thead>
+      <tbody>
+        <tr class="cmp-featured">
+          <td><a href="products/bhrl-13.html">BHRL-13</a> <span class="cmp-star">★</span></td>
+          <td>24 ჯ</td>
+          <td>9</td>
+          <td><i class="ti ti-check yes"></i></td>
+          <td>1 000 000</td>
+          <td class="cmp-price"><s>395₾</s> <b>300₾</b></td>
+          <td><a class="cmp-btn" href="products/bhrl-13.html">ნახვა</a></td>
+        </tr>
+        <tr>
+          <td><a href="products/bhrl-12.html">BHRL-12</a></td>
+          <td>24 ჯ</td>
+          <td>9</td>
+          <td><i class="ti ti-check yes"></i></td>
+          <td>1 000 000</td>
+          <td class="cmp-price"><s>365₾</s> <b>270₾</b></td>
+          <td><a class="cmp-btn" href="products/bhrl-12.html">ნახვა</a></td>
+        </tr>
+        <!-- TEMP HIDDEN (მარაგში დაბრუნებისას გახსენი) 
+<tr>
+          <td><a href="products/bhrl-10.html">BHRL-10</a></td>
+          <td>24 ჯ</td>
+          <td>9</td>
+          <td><i class="ti ti-check yes"></i></td>
+          <td>1 000 000</td>
+          <td class="cmp-price"><s>335₾</s> <b>220₾</b></td>
+          <td><a class="cmp-btn" href="products/bhrl-10.html">ნახვა</a></td>
+        </tr>
+-->
+        <tr>
+          <td><a href="products/bhrl-11.html">BHRL-11</a></td>
+          <td>24 ჯ</td>
+          <td>9</td>
+          <td><i class="ti ti-check yes"></i></td>
+          <td>1 000 000</td>
+          <td class="cmp-price"><s>350₾</s> <b>200₾</b></td>
+          <td><a class="cmp-btn" href="products/bhrl-11.html">ნახვა</a></td>
+        </tr>
+        <tr>
+          <td><a href="products/bhrl-04.html">BHRL-04</a></td>
+          <td>24 ჯ</td>
+          <td>9</td>
+          <td><i class="ti ti-check yes"></i></td>
+          <td>1 000 000</td>
+          <td class="cmp-price"><s>290₾</s> <b>150₾</b></td>
+          <td><a class="cmp-btn" href="products/bhrl-04.html">ნახვა</a></td>
+        </tr>
+        <tr>
+          <td><a href="products/tmy-002.html">TMY-002</a></td>
+          <td>12 ჯ</td>
+          <td>5</td>
+          <td><i class="ti ti-x no"></i></td>
+          <td>1 000 000</td>
+          <td class="cmp-price"><b>120₾</b></td>
+          <td><a class="cmp-btn" href="products/tmy-002.html">ნახვა</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- Why Choose -->
+<section class="why-section" id="why">
+  <div class="why-grid">
+    <div>
+      <div class="section-tag">✦ რატომ TSTORE</div>
+      <h2>პრემიუმ კლასის აპარატები,<br><span class="accent">სახლის პირობებში</span> მოსახმარებლად</h2>
+      <p>ჩვენი ფოტოეპილატორები სწორი მოხმარების პირობებში საუკეთესო შედეგის გარანტიაა.</p>
+      <div class="feature-list">
+        <div class="feature-item">
+          <div class="feature-icon"><i class="ti ti-bolt" aria-hidden="true"></i></div>
+          <div>
+            <div class="feature-title">სწრაფი შედეგი</div>
+            <div class="feature-desc">პირველი შედეგი 3-4 კვირიდან, რეალურ ეფექტზე გასვლა მერვე კვირიდან</div>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><i class="ti ti-shield" aria-hidden="true"></i></div>
+          <div>
+            <div class="feature-title">სრული უსაფრთხოება</div>
+            <div class="feature-desc">სერტიფიკაცია: CE, ROHS, FCC, PSE</div>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><i class="ti ti-coin" aria-hidden="true"></i></div>
+          <div>
+            <div class="feature-title">ეკონომიური</div>
+            <div class="feature-desc">ერთჯერადი შენაძენი — სალონის პროცედურებზე ბევრად იაფი</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-content">
+        <div class="stat-big">40–80<span class="stat-big-percent">%</span></div>
+        <div class="stat-title">თმის შემცირება — ინდივიდუალურად</div>
+        <div class="stat-subtitle">რეგულარული, სისტემატიური გამოყენების შედეგად</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section class="section" id="reviews">
+  <div class="section-header">
+    <div class="section-tag">✦ რას ამბობენ ჩვენი კლიენტები</div>
+    <h2>კმაყოფილი მომხმარებლები</h2>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"ძალიან კარგია, მადლობა თქვენ &lt;3"</p>
+      <div class="review-author">
+        <div class="author-avatar">ლ.მ</div>
+        <div>
+          <div class="author-name">ლიზიანე მიქელაძე</div>
+          <div class="author-detail">Facebook მიმოხილვა</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"მართლა ძაან კარგია და ფასებიც ნორმალუ (სხვებისგან განსხვავებით)"</p>
+      <div class="review-author">
+        <div class="author-avatar">ლ.ბ</div>
+        <div>
+          <div class="author-name">ლილე ბლიაძე</div>
+          <div class="author-detail">Facebook მიმოხილვა</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"დიდი მადლობა ასეთი ყურადღებით რომ ექცევით მომხმარებელს. რაღაც პატარა პრობლემა მქონდა და იქვე ყველაფერი სწრაფად მოაგვარეს. მადლობა და წარმატებები თქვენ &lt;3 გაიხარეთ"</p>
+      <div class="review-author">
+        <div class="author-avatar">ქ.ძ</div>
+        <div>
+          <div class="author-name">Qeti Dzocenidze Yuparadze</div>
+          <div class="author-detail">Facebook მიმოხილვა</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"ჩემგანაც დიდი მადლობა, დეტალებში ამიხსნეს ყველაფერი"</p>
+      <div class="review-author">
+        <div class="author-avatar">ნ.ხ</div>
+        <div>
+          <div class="author-name">ნატა ხარაზი</div>
+          <div class="author-detail">Facebook მიმოხილვა</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="section-header">
+    <div class="section-tag">✦ ხშირად დასმული კითხვები</div>
+    <h2>გაქვს კითხვა?</h2>
+    <p class="section-subtitle">ყველაზე ხშირი კითხვები IPL ეპილაციასა და ჩვენს სერვისზე</p>
+  </div>
+  <div class="faq-wrap">
+
+    <details class="faq-item">
+      <summary>როგორ მუშაობს IPL ეპილატორი? <i class="ti ti-chevron-down" aria-hidden="true"></i></summary>
+      <p>IPL (Intense Pulsed Light) სინათლის იმპულსს გამოსცემს. ეს სინათლე შთაინთქმება თმის მელანინში, რომელიც გარდაიქმნება სითბოდ და აზიანებს თმის ფოლიკულას. რის შედეგადაც თმა ფერმკრთალდება, თხელდება და ზრდის ინტენსივობა მცირდება.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>მტკივნეულია თუ არა პროცედურა? <i class="ti ti-chevron-down" aria-hidden="true"></i></summary>
+      <p>IPL ეპილაცია უმტკივნეულოა. შესაძლოა იგრძნო მსუბუქი სითბო ან ჩხვლეტა, მაგრამ ჩვენი მოდელების უმეტესობას აქვს Ice Cooling გაგრილების ფუნქცია, რომელიც პროცედურას კიდევ უფრო კომფორტულს ხდის.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>რამდენ ხანში ჩანს შედეგი? <i class="ti ti-chevron-down" aria-hidden="true"></i></summary>
+      <p>პირველი ხილული შედეგი ჩვეულებრივ 3-4 კვირიდან ჩანს, ხოლო რეალურ ეფექტზე გასვლა მერვე კვირიდან იწყება. შედეგი ინდივიდუალურია და დამოკიდებულია თმისა და კანის ტიპზე.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>რა პერიოდულობით უნდა გამოვიყენო? <i class="ti ti-chevron-down" aria-hidden="true"></i></summary>
+      <p>პირველი 1-4 კვირის განმავლობაში 3-ჯერ კვირაში. 5-8 კვირის განმავლობაში 2-ჯერ კვირაში. მე-8 კვირის შემდეგ 1-ჯერ კვირაში. ხილული შედეგის მიღების შემდეგ შეგიძლია გადახვიდე შემანარჩუნებელ რეჟიმზე — თვეში 1-2 პროცედურა. ყველაზე სწორი მიდგომაა — თმის ზრდის ინტენსივობაზე დაკვირვება და ისე აპარატის გამოყენების სიხშირის განსაზღვრა.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>ყველა კანისა და თმის ტიპს უხდება? <i class="ti ti-chevron-down" aria-hidden="true"></i></summary>
+      <p>IPL საუკეთესოდ მუშაობს ღია კანსა და მუქ თმაზე. ძალიან ღია (ჭაღარა), ასევე ძალიან მუქ კანზე ეფექტი შეიძლება შეზღუდული იყოს. თუ ეჭვი გაქვს, მოგვწერე Messenger-ში — დაგეხმარებით სწორი მოდელის შერჩევაში.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>აქვს თუ არა აპარატს გარანტია? <i class="ti ti-chevron-down" aria-hidden="true"></i></summary>
+      <p>დიახ, ყველა აპარატს აქვს ოფიციალური გარანტია. ყველა საგარანტიო დეტალი ფიქსირდება Messenger-მიმოწერაში, ამიტომ შეკვეთა სწორედ იქ უნდა გააფორმო — ასე შენი გარანტია ყოველთვის დაცული იქნება.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>როგორ ხდება მიწოდება და გადახდა? <i class="ti ti-chevron-down" aria-hidden="true"></i></summary>
+      <p>მიწოდება უფასოა მთელი საქართველოს მასშტაბით. შეკვეთის გაფორმების შემდეგ კურიერი წინასწარ დაგიკავშირდებათ და ისე მოგაწვდით პროდუქტს. გადახდა შესაძლებელია კურიერთან, ადგილზე.</p>
+    </details>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>მზად ხარ <span class="accent">ცვლილებისთვის?</span></h2>
+  <p>ჩვენ მზად ვართ შეგირჩიოთ თქვენთვის საუკეთესო მოდელი ♥</p>
+  <button class="btn-primary" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+    შეარჩიე შენი მოდელი
+    <i class="ti ti-arrow-right" aria-hidden="true"></i>
+  </button>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">TSTORE</div>
+      <p class="footer-desc">პრემიუმ კლასის აპარატები, ყველაზე ხელმისაწვდომ ფასებში.</p>
+    </div>
+    <div>
+      <div class="footer-title">მაღაზია</div>
+      <div class="footer-links">
+        <a href="#products">პროდუქტები</a>
+        <a href="#">ფასდაკლებები</a>
+        <a href="#">სიახლეები</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-title">დახმარება</div>
+      <div class="footer-links">
+        <a href="#faq">FAQ</a>
+        <a href="#faq">მიწოდება</a>
+        <a href="#faq">გარანტია</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-title">კონტაქტი</div>
+      <div class="footer-links">
+        <a href="https://www.facebook.com/profile.php?id=61556465853536" target="_blank"><i class="ti ti-brand-facebook" aria-hidden="true"></i> Facebook</a>
+        <a href="https://m.me/61556465853536" target="_blank"><i class="ti ti-brand-messenger" aria-hidden="true"></i> Messenger</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 Tstore.ge — ყველა უფლება დაცულია</div>
+  </div>
+</footer>
+
+<script>
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    const href = this.getAttribute('href');
+    if (href === '#' || href.length < 2) return;
+    e.preventDefault();
+    const target = document.querySelector(href);
+    if (target) target.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+</script>
+
+</body>
+</html>
